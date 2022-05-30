@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainsoundsettings"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    tools:context=".MainVoice">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@xml/okruglrelative"/>
+
+    <RelativeLayout
+        android:id="@+id/backgroundimage"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        app:layout_constraintTop_toBottomOf="@+id/zvuklabel"
+        tools:layout_editor_absoluteX="5dp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/sohranit"
+
+        android:layout_width="165dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="76dp"
+        android:text="@string/Proverkazvukabtn"
+        android:textColor="#FFFFFF"
+        android:textSize="12sp"
+        app:backgroundTint="#037CFF"
+        app:cornerRadius="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="DuplicateSpeakableTextCheck,TextContrastCheck"
+         />
+
+    <ImageView
+        android:id="@+id/backicon"
+        android:layout_width="33dp"
+        android:layout_height="24dp"
+        android:contentDescription="@string/vector"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.055"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.056"
+        app:srcCompat="@drawable/vector__1_" />
+
+    <TextView
+        android:id="@+id/zvuklabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Zvuklabel"
+        android:textColor="#037CFF"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.038"
+        app:layout_constraintStart_toEndOf="@+id/backicon"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.052"
+        tools:text="Звук" />
+
+    <TextView
+        android:id="@+id/text1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="56dp"
+        android:text="@string/Senseinliftlabel"
+        app:layout_constraintBottom_toTopOf="@+id/sohranit"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/backgroundimage"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageView
+        android:id="@+id/seekbarbackground"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.454"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text1"
+        app:srcCompat="@drawable/rectangle_440"
+        tools:ignore="ImageContrastCheck"
+        android:contentDescription="@string/background" />
+
+    <ImageView
+        android:id="@+id/iconseekbarsence"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/seekbarbackground"
+        app:layout_constraintEnd_toEndOf="@+id/seekbarbackground"
+        app:layout_constraintHorizontal_bias="0.028"
+        app:layout_constraintStart_toStartOf="@+id/seekbarbackground"
+        app:layout_constraintTop_toTopOf="@+id/seekbarbackground"
+        app:srcCompat="@drawable/senceicon"
+        tools:ignore="ImageContrastCheck"
+        android:contentDescription="@string/background2" />
+
+    <SeekBar
+        android:id="@+id/seekBarSenceonlift"
+        android:layout_width="330dp"
+        android:layout_height="18dp"
+        android:foregroundTint="#037CFF"
+        android:progressBackgroundTint="#037CFF"
+        android:progressTint="#037CFF"
+        android:thumbTint="#037CFF"
+        app:layout_constraintBottom_toBottomOf="@+id/seekbarbackground"
+        app:layout_constraintEnd_toEndOf="@+id/seekbarbackground"
+        app:layout_constraintStart_toEndOf="@+id/iconseekbarsence"
+        app:layout_constraintTop_toTopOf="@+id/seekbarbackground" />
+
+    <ImageView
+        android:id="@+id/seekbarbackground2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.454"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/seekbarbackground"
+        app:srcCompat="@drawable/rectangle_440"
+        tools:ignore="ImageContrastCheck"
+        android:contentDescription="@string/seekback" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/soundlvllabel"
+        app:layout_constraintBottom_toTopOf="@+id/seekbarbackground2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/seekbarbackground"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageView
+        android:id="@+id/soundiconforseekbar"
+        android:layout_width="21dp"
+        android:layout_height="24dp"
+        android:contentDescription="@string/soundicon"
+        app:layout_constraintBottom_toBottomOf="@+id/seekbarbackground2"
+        app:layout_constraintEnd_toEndOf="@+id/seekbarbackground2"
+        app:layout_constraintHorizontal_bias="0.029"
+        app:layout_constraintStart_toStartOf="@+id/seekbarbackground2"
+        app:layout_constraintTop_toTopOf="@+id/seekbarbackground2"
+        app:layout_constraintVertical_bias="0.458"
+        app:srcCompat="@drawable/sound_symbol_3"
+        tools:ignore="ImageContrastCheck" />
+
+    <SeekBar
+        android:id="@+id/seekBar2"
+        android:layout_width="330dp"
+        android:layout_height="18dp"
+        android:foregroundTint="#037CFF"
+        android:indeterminateTint="#037CFF"
+        android:progressBackgroundTint="#037CFF"
+        android:progressTint="#037CFF"
+        android:secondaryProgressTint="#037CFF"
+        android:thumbTint="#037CFF"
+        app:layout_constraintBottom_toBottomOf="@+id/seekbarbackground2"
+        app:layout_constraintEnd_toEndOf="@+id/seekbarbackground2"
+        app:layout_constraintHorizontal_bias="0.472"
+        app:layout_constraintStart_toEndOf="@+id/soundiconforseekbar"
+        app:layout_constraintTop_toTopOf="@+id/seekbarbackground2"
+        app:layout_constraintVertical_bias="0.444"
+        app:tickMarkTint="#037CFF" />
+
+    <ImageView
+        android:id="@+id/sencebackgroundimage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/seekbarbackground2"
+        app:srcCompat="@drawable/rectangle_440"
+        tools:ignore="ImageContrastCheck"
+        android:contentDescription="@string/background4" />
+
+    <TextView
+        android:id="@+id/labelsanceMP"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Senceinmplabel"
+        app:layout_constraintBottom_toTopOf="@+id/sencebackgroundimage"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/seekbarbackground2"
+        />
+
+    <ImageView
+        android:id="@+id/iconsenceMP"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/sencebackgroundimage"
+        app:layout_constraintEnd_toEndOf="@+id/sencebackgroundimage"
+        app:layout_constraintHorizontal_bias="0.028"
+        app:layout_constraintStart_toStartOf="@+id/sencebackgroundimage"
+        app:layout_constraintTop_toTopOf="@+id/sencebackgroundimage"
+        app:srcCompat="@drawable/senceicon"
+        tools:ignore="ImageContrastCheck"
+        android:contentDescription="@string/voicelvlicon" />
+
+    <SeekBar
+        android:id="@+id/seekBar3"
+        android:layout_width="330dp"
+        android:layout_height="18dp"
+        android:backgroundTint="#037CFF"
+        android:foregroundTint="#037CFF"
+        android:indeterminateTint="#037CFF"
+        android:progressBackgroundTint="#037CFF"
+        android:progressTint="#037CFF"
+        android:thumbTint="#037CFF"
+        app:layout_constraintBottom_toBottomOf="@+id/sencebackgroundimage"
+        app:layout_constraintEnd_toEndOf="@+id/sencebackgroundimage"
+        app:layout_constraintHorizontal_bias="0.583"
+        app:layout_constraintStart_toEndOf="@+id/iconsenceMP"
+        app:layout_constraintTop_toTopOf="@+id/sencebackgroundimage"
+        app:layout_constraintVertical_bias="0.576"
+        app:tickMarkTint="#037CFF" />
+
+    <ImageView
+        android:id="@+id/backgroundsoundlvlMP"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        app:layout_constraintBottom_toTopOf="@+id/sohranit"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.454"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sencebackgroundimage"
+        app:layout_constraintVertical_bias="0.018"
+        app:srcCompat="@drawable/rectangle_440"
+        tools:ignore="ImageContrastCheck"
+        android:contentDescription="@string/background3" />
+
+    <TextView
+        android:id="@+id/soundlvlMPlabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/gromcostinmplabel"
+        app:layout_constraintBottom_toTopOf="@+id/backgroundsoundlvlMP"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sencebackgroundimage" />
+
+    <ImageView
+        android:id="@+id/iconsoundlvlMP"
+        android:layout_width="21dp"
+        android:layout_height="24dp"
+        app:layout_constraintBottom_toBottomOf="@+id/backgroundsoundlvlMP"
+        app:layout_constraintEnd_toEndOf="@+id/backgroundsoundlvlMP"
+        app:layout_constraintHorizontal_bias="0.029"
+        app:layout_constraintStart_toStartOf="@+id/backgroundsoundlvlMP"
+        app:layout_constraintTop_toTopOf="@+id/backgroundsoundlvlMP"
+        app:layout_constraintVertical_bias="0.55"
+        app:srcCompat="@drawable/sound_symbol_3"
+        tools:ignore="ImageContrastCheck,ImageContrastCheck"
+        android:contentDescription="@string/iconsound" />
+
+    <SeekBar
+        android:id="@+id/seekBar4"
+        android:layout_width="330dp"
+        android:layout_height="18dp"
+        android:backgroundTint="#037CFF"
+        android:indeterminateTint="#037CFF"
+        android:progressBackgroundTint="#037CFF"
+        android:progressTint="#037CFF"
+        android:secondaryProgressTint="#037CFF"
+        android:thumbTint="#037CFF"
+        app:layout_constraintBottom_toBottomOf="@+id/backgroundsoundlvlMP"
+        app:layout_constraintEnd_toEndOf="@+id/backgroundsoundlvlMP"
+        app:layout_constraintHorizontal_bias="0.607"
+        app:layout_constraintStart_toEndOf="@+id/iconsoundlvlMP"
+        app:layout_constraintTop_toTopOf="@+id/backgroundsoundlvlMP"
+        app:layout_constraintVertical_bias="0.541" />
+
+    <CheckBox
+        android:id="@+id/checkBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="#037CFF"
+        android:buttonTint="#037CFF"
+        android:foregroundTint="#037CFF"
+        android:shadowColor="#037CFF"
+        android:text="@string/autolabel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.982"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/seekbarbackground"
+        tools:ignore="DuplicateSpeakableTextCheck,TextContrastCheck" />
+
+    <CheckBox
+        android:id="@+id/checkBox2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:buttonTint="#037CFF"
+        android:text="@string/auto2label"
+        app:layout_constraintEnd_toEndOf="@+id/sencebackgroundimage"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/sencebackgroundimage"
+        app:layout_constraintTop_toTopOf="@+id/sencebackgroundimage"
+        tools:ignore="TextContrastCheck" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
